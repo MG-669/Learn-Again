@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --button-color : #255784;
+            --button-lighting : #2196f3;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: #031321;
+        }
+
+        .button a {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            color: var(--button-lighting);
+            text-transform: uppercase;
+            font-family:monospace ;
+            word-spacing: 4px;
+            font-size: 24px;
+            overflow: hidden;
+            padding: 15px 30px;
+            transition: 0.2s cubic-bezier(0.06, 1.72, 1, -0.81);
+        }
+
+        .button a:hover {
+            color: var(--button-color);
+            background-color: var(--button-lighting);
+            box-shadow: 0 0 10px var(--button-lighting), 0 0 40px var(--button-lighting), 0 0 80px var(--button-lighting);
+            transition-delay: 2s;
+        }
+
+        .button a span{
+            position: absolute;
+            display: block;
+        }
+
+        .button a span:nth-child(1) {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg , transparent, var(--button-lighting));
+        }
+        .button a:hover span:nth-child(1){
+            left: 100%;
+            transition: 1s;
+        }
+        
+        .button a span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg , transparent, var(--button-lighting));
+        }
+        .button a:hover span:nth-child(2){
+            top: 100%;
+            transition: 1s;
+            transition-delay: 0.5s;
+        }
+        
+        .button a span:nth-child(3) {
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(270deg , transparent, var(--button-lighting));
+        }
+        .button a:hover span:nth-child(3){
+            right: 100%;
+            transition: 1s;
+            transition-delay: 1s;
+        }
+        
+        .button a span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(0deg , transparent, var(--button-lighting));
+        }
+        .button a:hover span:nth-child(4){
+            bottom: 100%;
+            transition: 1s;
+            transition-delay: 1.5s;
+        }
+        </style>
+</head>
+<body>
+    <div class="button">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            neon button
+        </a>
+    </div>
+</body>
+</html>
